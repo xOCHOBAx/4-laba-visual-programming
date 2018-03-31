@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
-<<<<<<<<< Temporary merge branch 1
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-=========
             this.label1 = new System.Windows.Forms.Label();
->>>>>>>>> Temporary merge branch 2
             this.SuspendLayout();
             // 
             // button2
