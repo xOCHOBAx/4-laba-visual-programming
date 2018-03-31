@@ -45,5 +45,10 @@ namespace _4_lab
         {
             this.LayoutMdi(MdiLayout.TileVertical);
         }
+
+        private void windowToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
