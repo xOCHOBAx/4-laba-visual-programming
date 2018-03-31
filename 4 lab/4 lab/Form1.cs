@@ -16,10 +16,5 @@ namespace _4_lab
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
