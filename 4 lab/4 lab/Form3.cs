@@ -16,5 +16,24 @@ namespace _4_lab
         {
             InitializeComponent();
         }
+
+        private void employeesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.employeesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.nWINDDataSet);
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Order_Details". При необходимости она может быть перемещена или удалена.
+            this.order_DetailsTableAdapter.Fill(this.nWINDDataSet.Order_Details);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Orders". При необходимости она может быть перемещена или удалена.
+            this.ordersTableAdapter.Fill(this.nWINDDataSet.Orders);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Employees". При необходимости она может быть перемещена или удалена.
+            this.employeesTableAdapter.Fill(this.nWINDDataSet.Employees);
+
+        }
     }
 }
