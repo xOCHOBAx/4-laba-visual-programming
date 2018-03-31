@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             System.Windows.Forms.Label employeeIDLabel;
             System.Windows.Forms.Label lastNameLabel;
             System.Windows.Forms.Label firstNameLabel;
@@ -46,22 +45,25 @@
             System.Windows.Forms.Label extensionLabel;
             System.Windows.Forms.Label notesLabel;
             System.Windows.Forms.Label reportsToLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.nWINDDataSet = new _4_lab.NWINDDataSet();
             this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeesTableAdapter = new _4_lab.NWINDDataSetTableAdapters.EmployeesTableAdapter();
             this.tableAdapterManager = new _4_lab.NWINDDataSetTableAdapters.TableAdapterManager();
+            this.order_DetailsTableAdapter = new _4_lab.NWINDDataSetTableAdapters.Order_DetailsTableAdapter();
+            this.ordersTableAdapter = new _4_lab.NWINDDataSetTableAdapters.OrdersTableAdapter();
             this.employeesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.employeesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.employeeIDTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
@@ -81,15 +83,24 @@
             this.reportsToTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ordersTableAdapter = new _4_lab.NWINDDataSetTableAdapters.OrdersTableAdapter();
             this.ordersDataGridView = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.order_DetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.order_DetailsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customersTableAdapter = new _4_lab.NWINDDataSetTableAdapters.CustomersTableAdapter();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsTableAdapter = new _4_lab.NWINDDataSetTableAdapters.ProductsTableAdapter();
+            this.shippersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shippersTableAdapter = new _4_lab.NWINDDataSetTableAdapters.ShippersTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,16 +108,11 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.order_DetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.order_DetailsTableAdapter = new _4_lab.NWINDDataSetTableAdapters.Order_DetailsTableAdapter();
-            this.order_DetailsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
             employeeIDLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
@@ -131,7 +137,154 @@
             ((System.ComponentModel.ISupportInitialize)(this.ordersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_DetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_DetailsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shippersBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // employeeIDLabel
+            // 
+            employeeIDLabel.AutoSize = true;
+            employeeIDLabel.Location = new System.Drawing.Point(11, 88);
+            employeeIDLabel.Name = "employeeIDLabel";
+            employeeIDLabel.Size = new System.Drawing.Size(70, 13);
+            employeeIDLabel.TabIndex = 1;
+            employeeIDLabel.Text = "Employee ID:";
+            // 
+            // lastNameLabel
+            // 
+            lastNameLabel.AutoSize = true;
+            lastNameLabel.Location = new System.Drawing.Point(11, 114);
+            lastNameLabel.Name = "lastNameLabel";
+            lastNameLabel.Size = new System.Drawing.Size(61, 13);
+            lastNameLabel.TabIndex = 3;
+            lastNameLabel.Text = "Last Name:";
+            // 
+            // firstNameLabel
+            // 
+            firstNameLabel.AutoSize = true;
+            firstNameLabel.Location = new System.Drawing.Point(11, 140);
+            firstNameLabel.Name = "firstNameLabel";
+            firstNameLabel.Size = new System.Drawing.Size(60, 13);
+            firstNameLabel.TabIndex = 5;
+            firstNameLabel.Text = "First Name:";
+            // 
+            // titleLabel
+            // 
+            titleLabel.AutoSize = true;
+            titleLabel.Location = new System.Drawing.Point(11, 166);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new System.Drawing.Size(30, 13);
+            titleLabel.TabIndex = 7;
+            titleLabel.Text = "Title:";
+            // 
+            // titleOfCourtesyLabel
+            // 
+            titleOfCourtesyLabel.AutoSize = true;
+            titleOfCourtesyLabel.Location = new System.Drawing.Point(11, 192);
+            titleOfCourtesyLabel.Name = "titleOfCourtesyLabel";
+            titleOfCourtesyLabel.Size = new System.Drawing.Size(88, 13);
+            titleOfCourtesyLabel.TabIndex = 9;
+            titleOfCourtesyLabel.Text = "Title Of Courtesy:";
+            // 
+            // birthDateLabel
+            // 
+            birthDateLabel.AutoSize = true;
+            birthDateLabel.Location = new System.Drawing.Point(11, 219);
+            birthDateLabel.Name = "birthDateLabel";
+            birthDateLabel.Size = new System.Drawing.Size(57, 13);
+            birthDateLabel.TabIndex = 11;
+            birthDateLabel.Text = "Birth Date:";
+            // 
+            // hireDateLabel
+            // 
+            hireDateLabel.AutoSize = true;
+            hireDateLabel.Location = new System.Drawing.Point(11, 245);
+            hireDateLabel.Name = "hireDateLabel";
+            hireDateLabel.Size = new System.Drawing.Size(55, 13);
+            hireDateLabel.TabIndex = 13;
+            hireDateLabel.Text = "Hire Date:";
+            // 
+            // addressLabel
+            // 
+            addressLabel.AutoSize = true;
+            addressLabel.Location = new System.Drawing.Point(11, 270);
+            addressLabel.Name = "addressLabel";
+            addressLabel.Size = new System.Drawing.Size(48, 13);
+            addressLabel.TabIndex = 15;
+            addressLabel.Text = "Address:";
+            // 
+            // cityLabel
+            // 
+            cityLabel.AutoSize = true;
+            cityLabel.Location = new System.Drawing.Point(11, 296);
+            cityLabel.Name = "cityLabel";
+            cityLabel.Size = new System.Drawing.Size(27, 13);
+            cityLabel.TabIndex = 17;
+            cityLabel.Text = "City:";
+            // 
+            // regionLabel
+            // 
+            regionLabel.AutoSize = true;
+            regionLabel.Location = new System.Drawing.Point(11, 322);
+            regionLabel.Name = "regionLabel";
+            regionLabel.Size = new System.Drawing.Size(44, 13);
+            regionLabel.TabIndex = 19;
+            regionLabel.Text = "Region:";
+            // 
+            // postalCodeLabel
+            // 
+            postalCodeLabel.AutoSize = true;
+            postalCodeLabel.Location = new System.Drawing.Point(11, 348);
+            postalCodeLabel.Name = "postalCodeLabel";
+            postalCodeLabel.Size = new System.Drawing.Size(67, 13);
+            postalCodeLabel.TabIndex = 21;
+            postalCodeLabel.Text = "Postal Code:";
+            // 
+            // countryLabel
+            // 
+            countryLabel.AutoSize = true;
+            countryLabel.Location = new System.Drawing.Point(11, 374);
+            countryLabel.Name = "countryLabel";
+            countryLabel.Size = new System.Drawing.Size(46, 13);
+            countryLabel.TabIndex = 23;
+            countryLabel.Text = "Country:";
+            // 
+            // homePhoneLabel
+            // 
+            homePhoneLabel.AutoSize = true;
+            homePhoneLabel.Location = new System.Drawing.Point(11, 400);
+            homePhoneLabel.Name = "homePhoneLabel";
+            homePhoneLabel.Size = new System.Drawing.Size(72, 13);
+            homePhoneLabel.TabIndex = 25;
+            homePhoneLabel.Text = "Home Phone:";
+            // 
+            // extensionLabel
+            // 
+            extensionLabel.AutoSize = true;
+            extensionLabel.Location = new System.Drawing.Point(11, 426);
+            extensionLabel.Name = "extensionLabel";
+            extensionLabel.Size = new System.Drawing.Size(56, 13);
+            extensionLabel.TabIndex = 27;
+            extensionLabel.Text = "Extension:";
+            // 
+            // notesLabel
+            // 
+            notesLabel.AutoSize = true;
+            notesLabel.Location = new System.Drawing.Point(11, 452);
+            notesLabel.Name = "notesLabel";
+            notesLabel.Size = new System.Drawing.Size(38, 13);
+            notesLabel.TabIndex = 29;
+            notesLabel.Text = "Notes:";
+            // 
+            // reportsToLabel
+            // 
+            reportsToLabel.AutoSize = true;
+            reportsToLabel.Location = new System.Drawing.Point(11, 478);
+            reportsToLabel.Name = "reportsToLabel";
+            reportsToLabel.Size = new System.Drawing.Size(63, 13);
+            reportsToLabel.TabIndex = 31;
+            reportsToLabel.Text = "Reports To:";
             // 
             // nWINDDataSet
             // 
@@ -159,6 +312,14 @@
             this.tableAdapterManager.ShippersTableAdapter = null;
             this.tableAdapterManager.SuppliersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = _4_lab.NWINDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // order_DetailsTableAdapter
+            // 
+            this.order_DetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // ordersTableAdapter
+            // 
+            this.ordersTableAdapter.ClearBeforeFill = true;
             // 
             // employeesBindingNavigator
             // 
@@ -189,6 +350,31 @@
             this.employeesBindingNavigator.Size = new System.Drawing.Size(1096, 25);
             this.employeesBindingNavigator.TabIndex = 0;
             this.employeesBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -222,16 +408,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -254,26 +433,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // employeesBindingNavigatorSaveItem
             // 
@@ -284,15 +445,6 @@
             this.employeesBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.employeesBindingNavigatorSaveItem.Click += new System.EventHandler(this.employeesBindingNavigatorSaveItem_Click);
             // 
-            // employeeIDLabel
-            // 
-            employeeIDLabel.AutoSize = true;
-            employeeIDLabel.Location = new System.Drawing.Point(11, 88);
-            employeeIDLabel.Name = "employeeIDLabel";
-            employeeIDLabel.Size = new System.Drawing.Size(70, 13);
-            employeeIDLabel.TabIndex = 1;
-            employeeIDLabel.Text = "Employee ID:";
-            // 
             // employeeIDTextBox
             // 
             this.employeeIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "EmployeeID", true));
@@ -300,15 +452,6 @@
             this.employeeIDTextBox.Name = "employeeIDTextBox";
             this.employeeIDTextBox.Size = new System.Drawing.Size(200, 20);
             this.employeeIDTextBox.TabIndex = 2;
-            // 
-            // lastNameLabel
-            // 
-            lastNameLabel.AutoSize = true;
-            lastNameLabel.Location = new System.Drawing.Point(11, 114);
-            lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new System.Drawing.Size(61, 13);
-            lastNameLabel.TabIndex = 3;
-            lastNameLabel.Text = "Last Name:";
             // 
             // lastNameTextBox
             // 
@@ -318,15 +461,6 @@
             this.lastNameTextBox.Size = new System.Drawing.Size(200, 20);
             this.lastNameTextBox.TabIndex = 4;
             // 
-            // firstNameLabel
-            // 
-            firstNameLabel.AutoSize = true;
-            firstNameLabel.Location = new System.Drawing.Point(11, 140);
-            firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new System.Drawing.Size(60, 13);
-            firstNameLabel.TabIndex = 5;
-            firstNameLabel.Text = "First Name:";
-            // 
             // firstNameTextBox
             // 
             this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "FirstName", true));
@@ -334,15 +468,6 @@
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(200, 20);
             this.firstNameTextBox.TabIndex = 6;
-            // 
-            // titleLabel
-            // 
-            titleLabel.AutoSize = true;
-            titleLabel.Location = new System.Drawing.Point(11, 166);
-            titleLabel.Name = "titleLabel";
-            titleLabel.Size = new System.Drawing.Size(30, 13);
-            titleLabel.TabIndex = 7;
-            titleLabel.Text = "Title:";
             // 
             // titleTextBox
             // 
@@ -352,15 +477,6 @@
             this.titleTextBox.Size = new System.Drawing.Size(200, 20);
             this.titleTextBox.TabIndex = 8;
             // 
-            // titleOfCourtesyLabel
-            // 
-            titleOfCourtesyLabel.AutoSize = true;
-            titleOfCourtesyLabel.Location = new System.Drawing.Point(11, 192);
-            titleOfCourtesyLabel.Name = "titleOfCourtesyLabel";
-            titleOfCourtesyLabel.Size = new System.Drawing.Size(88, 13);
-            titleOfCourtesyLabel.TabIndex = 9;
-            titleOfCourtesyLabel.Text = "Title Of Courtesy:";
-            // 
             // titleOfCourtesyTextBox
             // 
             this.titleOfCourtesyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "TitleOfCourtesy", true));
@@ -368,15 +484,6 @@
             this.titleOfCourtesyTextBox.Name = "titleOfCourtesyTextBox";
             this.titleOfCourtesyTextBox.Size = new System.Drawing.Size(200, 20);
             this.titleOfCourtesyTextBox.TabIndex = 10;
-            // 
-            // birthDateLabel
-            // 
-            birthDateLabel.AutoSize = true;
-            birthDateLabel.Location = new System.Drawing.Point(11, 219);
-            birthDateLabel.Name = "birthDateLabel";
-            birthDateLabel.Size = new System.Drawing.Size(57, 13);
-            birthDateLabel.TabIndex = 11;
-            birthDateLabel.Text = "Birth Date:";
             // 
             // birthDateDateTimePicker
             // 
@@ -386,15 +493,6 @@
             this.birthDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.birthDateDateTimePicker.TabIndex = 12;
             // 
-            // hireDateLabel
-            // 
-            hireDateLabel.AutoSize = true;
-            hireDateLabel.Location = new System.Drawing.Point(11, 245);
-            hireDateLabel.Name = "hireDateLabel";
-            hireDateLabel.Size = new System.Drawing.Size(55, 13);
-            hireDateLabel.TabIndex = 13;
-            hireDateLabel.Text = "Hire Date:";
-            // 
             // hireDateDateTimePicker
             // 
             this.hireDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.employeesBindingSource, "HireDate", true));
@@ -402,15 +500,6 @@
             this.hireDateDateTimePicker.Name = "hireDateDateTimePicker";
             this.hireDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.hireDateDateTimePicker.TabIndex = 14;
-            // 
-            // addressLabel
-            // 
-            addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(11, 270);
-            addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(48, 13);
-            addressLabel.TabIndex = 15;
-            addressLabel.Text = "Address:";
             // 
             // addressTextBox
             // 
@@ -420,15 +509,6 @@
             this.addressTextBox.Size = new System.Drawing.Size(200, 20);
             this.addressTextBox.TabIndex = 16;
             // 
-            // cityLabel
-            // 
-            cityLabel.AutoSize = true;
-            cityLabel.Location = new System.Drawing.Point(11, 296);
-            cityLabel.Name = "cityLabel";
-            cityLabel.Size = new System.Drawing.Size(27, 13);
-            cityLabel.TabIndex = 17;
-            cityLabel.Text = "City:";
-            // 
             // cityTextBox
             // 
             this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "City", true));
@@ -436,15 +516,6 @@
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(200, 20);
             this.cityTextBox.TabIndex = 18;
-            // 
-            // regionLabel
-            // 
-            regionLabel.AutoSize = true;
-            regionLabel.Location = new System.Drawing.Point(11, 322);
-            regionLabel.Name = "regionLabel";
-            regionLabel.Size = new System.Drawing.Size(44, 13);
-            regionLabel.TabIndex = 19;
-            regionLabel.Text = "Region:";
             // 
             // regionTextBox
             // 
@@ -454,15 +525,6 @@
             this.regionTextBox.Size = new System.Drawing.Size(200, 20);
             this.regionTextBox.TabIndex = 20;
             // 
-            // postalCodeLabel
-            // 
-            postalCodeLabel.AutoSize = true;
-            postalCodeLabel.Location = new System.Drawing.Point(11, 348);
-            postalCodeLabel.Name = "postalCodeLabel";
-            postalCodeLabel.Size = new System.Drawing.Size(67, 13);
-            postalCodeLabel.TabIndex = 21;
-            postalCodeLabel.Text = "Postal Code:";
-            // 
             // postalCodeTextBox
             // 
             this.postalCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "PostalCode", true));
@@ -470,15 +532,6 @@
             this.postalCodeTextBox.Name = "postalCodeTextBox";
             this.postalCodeTextBox.Size = new System.Drawing.Size(200, 20);
             this.postalCodeTextBox.TabIndex = 22;
-            // 
-            // countryLabel
-            // 
-            countryLabel.AutoSize = true;
-            countryLabel.Location = new System.Drawing.Point(11, 374);
-            countryLabel.Name = "countryLabel";
-            countryLabel.Size = new System.Drawing.Size(46, 13);
-            countryLabel.TabIndex = 23;
-            countryLabel.Text = "Country:";
             // 
             // countryTextBox
             // 
@@ -488,15 +541,6 @@
             this.countryTextBox.Size = new System.Drawing.Size(200, 20);
             this.countryTextBox.TabIndex = 24;
             // 
-            // homePhoneLabel
-            // 
-            homePhoneLabel.AutoSize = true;
-            homePhoneLabel.Location = new System.Drawing.Point(11, 400);
-            homePhoneLabel.Name = "homePhoneLabel";
-            homePhoneLabel.Size = new System.Drawing.Size(72, 13);
-            homePhoneLabel.TabIndex = 25;
-            homePhoneLabel.Text = "Home Phone:";
-            // 
             // homePhoneTextBox
             // 
             this.homePhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "HomePhone", true));
@@ -504,15 +548,6 @@
             this.homePhoneTextBox.Name = "homePhoneTextBox";
             this.homePhoneTextBox.Size = new System.Drawing.Size(200, 20);
             this.homePhoneTextBox.TabIndex = 26;
-            // 
-            // extensionLabel
-            // 
-            extensionLabel.AutoSize = true;
-            extensionLabel.Location = new System.Drawing.Point(11, 426);
-            extensionLabel.Name = "extensionLabel";
-            extensionLabel.Size = new System.Drawing.Size(56, 13);
-            extensionLabel.TabIndex = 27;
-            extensionLabel.Text = "Extension:";
             // 
             // extensionTextBox
             // 
@@ -522,15 +557,6 @@
             this.extensionTextBox.Size = new System.Drawing.Size(200, 20);
             this.extensionTextBox.TabIndex = 28;
             // 
-            // notesLabel
-            // 
-            notesLabel.AutoSize = true;
-            notesLabel.Location = new System.Drawing.Point(11, 452);
-            notesLabel.Name = "notesLabel";
-            notesLabel.Size = new System.Drawing.Size(38, 13);
-            notesLabel.TabIndex = 29;
-            notesLabel.Text = "Notes:";
-            // 
             // notesTextBox
             // 
             this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "Notes", true));
@@ -538,15 +564,6 @@
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.Size = new System.Drawing.Size(200, 20);
             this.notesTextBox.TabIndex = 30;
-            // 
-            // reportsToLabel
-            // 
-            reportsToLabel.AutoSize = true;
-            reportsToLabel.Location = new System.Drawing.Point(11, 478);
-            reportsToLabel.Name = "reportsToLabel";
-            reportsToLabel.Size = new System.Drawing.Size(63, 13);
-            reportsToLabel.TabIndex = 31;
-            reportsToLabel.Text = "Reports To:";
             // 
             // reportsToTextBox
             // 
@@ -570,10 +587,6 @@
             // 
             this.ordersBindingSource.DataMember = "EmployeesOrders";
             this.ordersBindingSource.DataSource = this.employeesBindingSource;
-            // 
-            // ordersTableAdapter
-            // 
-            this.ordersTableAdapter.ClearBeforeFill = true;
             // 
             // ordersDataGridView
             // 
@@ -600,6 +613,74 @@
             this.ordersDataGridView.Size = new System.Drawing.Size(300, 410);
             this.ordersDataGridView.TabIndex = 34;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(479, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 20);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Orders";
+            // 
+            // order_DetailsBindingSource
+            // 
+            this.order_DetailsBindingSource.DataMember = "OrdersOrder Details";
+            this.order_DetailsBindingSource.DataSource = this.ordersBindingSource;
+            // 
+            // order_DetailsDataGridView
+            // 
+            this.order_DetailsDataGridView.AutoGenerateColumns = false;
+            this.order_DetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.order_DetailsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
+            this.order_DetailsDataGridView.DataSource = this.order_DetailsBindingSource;
+            this.order_DetailsDataGridView.Location = new System.Drawing.Point(745, 85);
+            this.order_DetailsDataGridView.Name = "order_DetailsDataGridView";
+            this.order_DetailsDataGridView.Size = new System.Drawing.Size(319, 410);
+            this.order_DetailsDataGridView.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(849, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 20);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Order Details";
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataMember = "Customers";
+            this.customersBindingSource.DataSource = this.nWINDDataSet;
+            // 
+            // customersTableAdapter
+            // 
+            this.customersTableAdapter.ClearBeforeFill = true;
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this.nWINDDataSet;
+            // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
+            // shippersBindingSource
+            // 
+            this.shippersBindingSource.DataMember = "Shippers";
+            this.shippersBindingSource.DataSource = this.nWINDDataSet;
+            // 
+            // shippersTableAdapter
+            // 
+            this.shippersTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "OrderID";
@@ -609,14 +690,24 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "CustomerID";
+            this.dataGridViewTextBoxColumn2.DataSource = this.customersBindingSource;
+            this.dataGridViewTextBoxColumn2.DisplayMember = "CompanyName";
             this.dataGridViewTextBoxColumn2.HeaderText = "CustomerID";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn2.ValueMember = "CustomerID";
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "EmployeeID";
+            this.dataGridViewTextBoxColumn3.DataSource = this.employeesBindingSource;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "LastName";
             this.dataGridViewTextBoxColumn3.HeaderText = "EmployeeID";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "EmployeeID";
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -639,8 +730,13 @@
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "ShipVia";
+            this.dataGridViewTextBoxColumn7.DataSource = this.shippersBindingSource;
+            this.dataGridViewTextBoxColumn7.DisplayMember = "CompanyName";
             this.dataGridViewTextBoxColumn7.HeaderText = "ShipVia";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn7.ValueMember = "ShipperID";
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -684,41 +780,6 @@
             this.dataGridViewTextBoxColumn14.HeaderText = "ShipCountry";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(479, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 20);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Orders";
-            // 
-            // order_DetailsBindingSource
-            // 
-            this.order_DetailsBindingSource.DataMember = "OrdersOrder Details";
-            this.order_DetailsBindingSource.DataSource = this.ordersBindingSource;
-            // 
-            // order_DetailsTableAdapter
-            // 
-            this.order_DetailsTableAdapter.ClearBeforeFill = true;
-            // 
-            // order_DetailsDataGridView
-            // 
-            this.order_DetailsDataGridView.AutoGenerateColumns = false;
-            this.order_DetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.order_DetailsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19});
-            this.order_DetailsDataGridView.DataSource = this.order_DetailsBindingSource;
-            this.order_DetailsDataGridView.Location = new System.Drawing.Point(745, 85);
-            this.order_DetailsDataGridView.Name = "order_DetailsDataGridView";
-            this.order_DetailsDataGridView.Size = new System.Drawing.Size(319, 410);
-            this.order_DetailsDataGridView.TabIndex = 36;
-            // 
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "OrderID";
@@ -728,8 +789,13 @@
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "ProductID";
+            this.dataGridViewTextBoxColumn16.DataSource = this.productsBindingSource;
+            this.dataGridViewTextBoxColumn16.DisplayMember = "ProductName";
             this.dataGridViewTextBoxColumn16.HeaderText = "ProductID";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn16.ValueMember = "ProductID";
             // 
             // dataGridViewTextBoxColumn17
             // 
@@ -749,21 +815,11 @@
             this.dataGridViewTextBoxColumn19.HeaderText = "Discount";
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(849, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 20);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Order Details";
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 543);
+            this.ClientSize = new System.Drawing.Size(1096, 578);
             this.Controls.Add(this.order_DetailsDataGridView);
             this.Controls.Add(this.ordersDataGridView);
             this.Controls.Add(this.label3);
@@ -814,6 +870,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ordersDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_DetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_DetailsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shippersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -859,13 +918,23 @@
         private System.Windows.Forms.BindingSource ordersBindingSource;
         private NWINDDataSetTableAdapters.Order_DetailsTableAdapter order_DetailsTableAdapter;
         private System.Windows.Forms.DataGridView ordersDataGridView;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.BindingSource order_DetailsBindingSource;
+        private System.Windows.Forms.DataGridView order_DetailsDataGridView;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.BindingSource customersBindingSource;
+        private NWINDDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
+        private System.Windows.Forms.BindingSource productsBindingSource;
+        private NWINDDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
+        private System.Windows.Forms.BindingSource shippersBindingSource;
+        private NWINDDataSetTableAdapters.ShippersTableAdapter shippersTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
@@ -873,14 +942,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource order_DetailsBindingSource;
-        private System.Windows.Forms.DataGridView order_DetailsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.Label label3;
     }
 }

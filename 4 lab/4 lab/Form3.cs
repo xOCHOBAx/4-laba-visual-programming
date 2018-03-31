@@ -27,6 +27,12 @@ namespace _4_lab
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Shippers". При необходимости она может быть перемещена или удалена.
+            this.shippersTableAdapter.Fill(this.nWINDDataSet.Shippers);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Products". При необходимости она может быть перемещена или удалена.
+            this.productsTableAdapter.Fill(this.nWINDDataSet.Products);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Customers". При необходимости она может быть перемещена или удалена.
+            this.customersTableAdapter.Fill(this.nWINDDataSet.Customers);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Order_Details". При необходимости она может быть перемещена или удалена.
             this.order_DetailsTableAdapter.Fill(this.nWINDDataSet.Order_Details);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Orders". При необходимости она может быть перемещена или удалена.
