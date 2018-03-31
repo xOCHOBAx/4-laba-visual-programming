@@ -19,6 +19,12 @@ namespace _4_lab
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Products". При необходимости она может быть перемещена или удалена.
+            this.productsTableAdapter.Fill(this.nWINDDataSet.Products);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Shippers". При необходимости она может быть перемещена или удалена.
+            this.shippersTableAdapter.Fill(this.nWINDDataSet.Shippers);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Employees". При необходимости она может быть перемещена или удалена.
+            this.employeesTableAdapter.Fill(this.nWINDDataSet.Employees);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Order_Details". При необходимости она может быть перемещена или удалена.
             this.order_DetailsTableAdapter.Fill(this.nWINDDataSet.Order_Details);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "nWINDDataSet.Orders". При необходимости она может быть перемещена или удалена.
@@ -33,6 +39,11 @@ namespace _4_lab
             this.Validate();
             this.customersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.nWINDDataSet);
+
+        }
+
+        private void ordersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
